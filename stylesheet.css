@@ -1,0 +1,11 @@
+/* General styles */
+* {
+	box-sizing: border-box;
+}
+
+
+
+/* For desktop */
+@media (min-width: 800px) {
+
+}
