@@ -68,6 +68,7 @@ function showRow(key, value) {
   return row;
 }
 
+/* Waiting for event trigger
 document
   .getElementById('saveBtn')
   .addEventListener('click', saveDataClicked);
@@ -79,3 +80,4 @@ document
 document
   .getElementById('delBtn')
   .addEventListener('click', deleteClicked);
+*/
