@@ -1,3 +1,3 @@
-﻿Zephyr's repository for Fuel log application HIT387 - Mobile Paradigm
+﻿Zephyr's repository for Fuel log application HIT238 - Mobile Paradigm
 
 External libraries:
