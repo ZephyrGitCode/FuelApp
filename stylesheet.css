@@ -10,12 +10,13 @@
 	width: 30%;
 	margin: 5px 5px 5px 5px;
 }
+
 /* Home summary */
-.homesummary{
+.homesummary, .homelog{
 	justify-content: center;
 }
 
-.summcard {
+.summcard, .log {
 	border: solid black 1px;
 	border-radius: 10px;
 	width: 80%;
@@ -23,15 +24,17 @@
 	margin: auto;
 }
 
+/* Home log */
 
-/* Styling for navigation  */
+
+
+/* Styling for top navigation  */
 nav {
 	display: flex;
 	padding-bottom: 10px;
 }
 
 .flex-container {
-	border: solid black 1px;
 	border-radius: 10px;
 	width: 25%;
   display: flex;
@@ -41,6 +44,10 @@ nav {
   align-content: center;
   align-items: flex-start;
   text-align: center;
+}
+
+.flex-item {
+	margin: 10px 0 10px 0;
 }
 
 .flex-item p{
@@ -53,13 +60,8 @@ nav {
 	font-weight:400;
 	color:#212529;
 	text-align:center;
-	vertical-align:middle;
-	-webkit-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
 	user-select:none;
 	background-color:transparent;
-	border:1px solid transparent;
 	padding:.375rem .75rem;
 	font-size:1rem;
 	line-height:1.5;
