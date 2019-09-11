@@ -9,6 +9,7 @@ body {
    height:100%;
 	 font-family: Arial;
 	 font-size: 18px;
+	 	background-color: #F5F5DC;
 }
 
 .content {
@@ -19,6 +20,7 @@ body {
 /* car selection */
 .carselect{
 	border: solid black 1px;
+	border-radius: 3px;
 	margin: 10px;
 	padding: 0;
 	width: 30%;
@@ -149,7 +151,7 @@ button {
   background: #fff;
   border: 2px solid #333;
   border-radius: 5px;
-  color: #333;
+  color: white;
   font-size: 16px;
   font-weight: bold;
   padding: 1rem;
@@ -211,6 +213,9 @@ button {
   align-items: flex-start;
   text-align: center;
 	border: 1px solid #333;
+	box-shadow: inset 0px -3px 7px 0px #3dc21b;
+	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color: #44c767;
 }
 
 .flex-item {

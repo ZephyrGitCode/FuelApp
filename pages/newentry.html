@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<title>Fuel_Log</title>
 	</head>
-  <body>
+  <body class="entrypage">
 		<div class="content">
 			<header>
 				<div class="carselect">
@@ -35,14 +35,17 @@
 
 						<label for="datefield">Date: <span>(auto to today)</span></label>
 						<input type="date" id="today" name="datefield" value="" style="text-align:right;">
+
 						<div class ="btngroup">
 							<div class="bbtn">
-								<button type="button" class="btn" name="backbtn"><a href="../index.html">Back</a></button>
+								<a href="../index.html"><button type="button" class="btn" name="backbtn">Back</button></a>
 							</div>
+
 							<div class="donebtn">
-								<button type="submit" class="btn" name="savebtn"><a href="../index.html">Save</a></button>
+								<a href="../index.html"><button type="submit" class="btn" name="savebtn">Save</button></a>
 							</div>
 						</div>
+
 					</form>
 				</div>
 			</div>
@@ -76,5 +79,6 @@
 		</div>
 
   </body>
-  <script src="../scripts/localstorage.js"></script><script src="../scripts/date.js"></script>
+  <script src="../scripts/localstorage.js"></script>
+	<script src="../scripts/date.js"></script>
 </html>
