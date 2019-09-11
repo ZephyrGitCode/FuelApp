@@ -97,6 +97,33 @@ table {
 	bottom: 99px;
 }
 
+/* label styling from https://codepen.io/559wade/pen/LRzEjj author Wade Williams */
+
+.entry span{
+	color:grey;
+	font-size:16px;
+}
+
+input [type="number"] {
+	text-align: right;
+}
+
+label {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input {
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #333;
+  font-size: 32px;
+  margin: 0 0 20px;
+  padding: .5rem 1rem;
+  width: 100%;
+}
 
 /* Styling for top navigation  */
 .nav {

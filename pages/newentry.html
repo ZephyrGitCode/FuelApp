@@ -13,32 +13,22 @@
 					<h2>Car 1</h2>
 				</div>
 			</header>
-			<div class="homesummary">
-				<p>Monthly Summary</p>
-				<div class="summcard">
-					<table align="center">
-						<tr>
-							<td>$ </td>
-							<td> l</td>
-						</tr>
-						<tr>
-							<td>Date: </td>
-							<td>ODO: </td>
-						</tr>
-					</table>
-				</div>
+
+			<div class="entry">
+				<form method="post" action="">
+					<label for="odofield">Odo counter (km):</label>
+					<input type="number" name="odofield">
+
+					<label for="fuelfield">Fuel (l): <span>(optional)</span></label>
+					<input type="number" name="fuelfield">
+
+					<label for="costfield">Price / L: <span>(optional)</span></label>
+					<input type="number" name="costfield" placeholder="$">
 			</div>
-			<div class="homelog">
-				<p>Fuel Log</p>
-				<div class="log">
-					<table align="center">
-						<tr><td>$ </td><td> l</td></tr>
-						<tr><td>Date: </td><td>ODO: </td></tr>
-					</table>
-				</div>
-			</div>
+
 			<button type="button" class="btn" name="hellobtn"><a>Lol</a></button>
 		</div>
+
 		<div class="sticky">
 			<nav class="nav">
 				<div class="flex-container">
@@ -63,6 +53,7 @@
 				</div>
 			</nav>
 		</div>
+
   </body>
   <script src="scripts/localstorage.js"></script>
 </html>
