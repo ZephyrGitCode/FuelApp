@@ -7,7 +7,7 @@ body {
    margin:0;
    padding:0;
    height:100%;
-	 font-family: sans-serif;
+	 font-family: Arial;
 	 font-size: 18px;
 }
 
@@ -19,10 +19,12 @@ body {
 /* car selection */
 .carselect{
 	border: solid black 1px;
+	margin: 10px;
+	padding: 0;
 	width: 30%;
-	height: 40px;
-	display: flex;
-	margin: 5px 5px 5px 5px;
+}
+.carselect h2{
+	margin: auto;
 }
 
 header, header a{
@@ -63,6 +65,38 @@ table {
 	margin: auto;
 }
 
+/* New Entry */
+.newentry {
+	position: fixed;
+	text-align: center;
+	bottom: 100px;
+	width: 60%;
+	margin: 0 20% 0 20%;
+	height: 80px;
+	box-shadow: inset 0px -3px 7px 0px #3dc21b;
+	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color: #44c767;
+	border-radius:3px;
+	border: 1px solid #18ab29;
+	display: inline-block;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 15px;
+	padding: 9px 23px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #2f6627;
+}
+.newentry a{
+	text-decoration: none;
+	color: #ffffff;
+}
+.newentry:active {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #309c50 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#44c767',GradientType=0);
+	position: fixed;
+	bottom: 99px;
+}
+
 
 /* Styling for top navigation  */
 .nav {
@@ -73,10 +107,15 @@ table {
  	height:80px;
 	line-height: 1.25;
 	text-align: center;
-	color: #042E64;
 	font-family: sans-serif;
 	text-shadow: 0 1px 0 #84BAFF;
-	box-shadow: 0 0 15px #00214B
+	box-shadow: 0 0 15px #00214B;
+	text-decoration: none;
+	background-color: #44c767;
+}
+.nav a{
+	text-decoration: none;
+	color: #ffffff;
 }
 
 .flex-container {
@@ -99,17 +138,6 @@ table {
 	margin: 5px 5px 0 5px;
 }
 
-.footer {
-    background: #0070FF;
-    line-height: 2;
-    text-align: center;
-    color: #042E64;
-    font-size: 30px;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #84BAFF;
-    box-shadow: 0 0 15px #00214B
-}
 /* buttons */
 .btn{
 	display:inline-block;
