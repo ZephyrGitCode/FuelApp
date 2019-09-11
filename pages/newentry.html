@@ -22,23 +22,26 @@
 					<label for="fuelfield">Fuel (l): <span>(optional)</span></label>
 					<input type="number" name="fuelfield" placeholder="25">
 
-
-
 						<div class="flexentry">
-							<div>
+							<div class="cost">
 								<label for="costfield">Price / L: <span>(optional)</span></label>
 								<input type="number" name="costfield" placeholder="1.35">
 							</div>
-
-							<div>
+							<div class="cost" style="margin-left:10%;">
 								<label for="costfield">Total: <span>(optional)</span></label>
 								<input type="number" name="costfield" placeholder="$">
 							</div>
 						</div>
+
+						<label for="datefield">Date: <span>(auto to today)</span></label>
+						<input type="date" id="today" name="datefield" value="" stle>
+
+						<button type="button" class="btn" name="hellobtn"><a href="./index.html">Back</a></button>
+						<button type="button" class="btn" name="hellobtn"><a href="./index.html">Save</a></button>
 				</form>
 			</div>
 
-			<button type="button" class="btn" name="hellobtn"><a>Lol</a></button>
+
 		</div>
 
 		<div class="sticky">
@@ -67,5 +70,5 @@
 		</div>
 
   </body>
-  <script src="scripts/localstorage.js"></script>
+  <script src="../scripts/localstorage.js"></script><script src="../scripts/date.js"></script>
 </html>

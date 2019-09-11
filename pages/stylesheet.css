@@ -23,8 +23,13 @@ body {
 	padding: 0;
 	width: 30%;
 }
+
 .carselect h2{
 	margin: auto;
+	margin-left: 0;
+	font-size: 20px;
+	display: block;
+  font-weight: bold;
 }
 
 header, header a{
@@ -98,10 +103,12 @@ table {
 }
 
 /* label styling from https://codepen.io/559wade/pen/LRzEjj author Wade Williams */
-
 .entry span{
 	color:grey;
 	font-size:16px;
+}
+.cost {
+	width: 40%;
 }
 
 .flexentry {
@@ -114,7 +121,7 @@ table {
 
 label {
   display: block;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -123,9 +130,9 @@ input {
   border: 2px solid #333;
   border-radius: 5px;
   color: #333;
-  font-size: 32px;
+  font-size: 26px;
   margin: 0 0 20px;
-  padding: .5rem 1rem;
+  padding: .25rem .75rem;
   width: 100%;
 }
 
