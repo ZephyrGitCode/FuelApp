@@ -104,7 +104,11 @@ table {
 	font-size:16px;
 }
 
-input [type="number"] {
+.flexentry {
+	display: flex;
+}
+
+::placeholder {
 	text-align: right;
 }
 

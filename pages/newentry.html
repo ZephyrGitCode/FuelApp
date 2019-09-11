@@ -16,14 +16,26 @@
 
 			<div class="entry">
 				<form method="post" action="">
-					<label for="odofield">Odo counter (km):</label>
-					<input type="number" name="odofield">
+					<label for="odofield">Odo counter (km): <span>(optional)</span></label>
+					<input type="number" name="odofield" placeholder="5000">
 
 					<label for="fuelfield">Fuel (l): <span>(optional)</span></label>
-					<input type="number" name="fuelfield">
+					<input type="number" name="fuelfield" placeholder="25">
 
-					<label for="costfield">Price / L: <span>(optional)</span></label>
-					<input type="number" name="costfield" placeholder="$">
+
+
+						<div class="flexentry">
+							<div>
+								<label for="costfield">Price / L: <span>(optional)</span></label>
+								<input type="number" name="costfield" placeholder="1.35">
+							</div>
+
+							<div>
+								<label for="costfield">Total: <span>(optional)</span></label>
+								<input type="number" name="costfield" placeholder="$">
+							</div>
+						</div>
+				</form>
 			</div>
 
 			<button type="button" class="btn" name="hellobtn"><a>Lol</a></button>
