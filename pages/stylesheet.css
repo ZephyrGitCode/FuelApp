@@ -71,7 +71,7 @@ table {
 }
 
 /* New Entry button + new entry page styling */
-.newentry {
+.newentry{
 	position: fixed;
 	text-align: center;
 	bottom: 100px;
@@ -81,7 +81,7 @@ table {
 	box-shadow: inset 0px -3px 7px 0px #3dc21b;
 	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
 	background-color: #44c767;
-	border-radius:3px;
+	border-radius: 10px;
 	border: 1px solid #18ab29;
 	display: inline-block;
 	cursor: pointer;
@@ -91,6 +91,7 @@ table {
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #2f6627;
 }
+
 .newentry a{
 	text-decoration: none;
 	color: #ffffff;
@@ -103,11 +104,11 @@ table {
 }
 
 /* new entry page */
-
 .entry span{
 	color:grey;
 	font-size:16px;
 }
+
 .cost {
 	width: 40%;
 }
@@ -139,6 +140,11 @@ input {
 	background-color: transparent;
 }
 
+.btngroup {
+	display: flex;
+	margin-top: 5%;
+}
+
 button {
   background: #fff;
   border: 2px solid #333;
@@ -147,6 +153,31 @@ button {
   font-size: 16px;
   font-weight: bold;
   padding: 1rem;
+}
+
+.donebtn {
+	margin-left: 50%;
+}
+
+.btn {
+	height: 60px;
+	box-shadow: inset 0px -3px 7px 0px #3dc21b;
+	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color: #44c767;
+	border-radius: 10px;
+	border: 1px solid #18ab29;
+	display: inline-block;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 15px;
+	padding: 9px 23px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #2f6627;
+}
+
+.btn a{
+	text-decoration: none;
+	color: white;
 }
 
 /* Bottom navigation  */
@@ -162,7 +193,7 @@ button {
 	text-shadow: 0 1px 0 #84BAFF;
 	box-shadow: 0 0 15px #00214B;
 	text-decoration: none;
-	background-color: #44c767;
+	background-color: #5cbf2a;
 }
 .nav a{
 	text-decoration: none;
@@ -189,23 +220,6 @@ button {
 .flex-item p{
 	margin: 5px 5px 0 5px;
 }
-
-/* buttons */
-.btn{
-	display:inline-block;
-	font-weight:400;
-	color:#212529;
-	text-align:center;
-	user-select:none;
-	background-color:transparent;
-	padding:.375rem .75rem;
-	font-size:1rem;
-	line-height:1.5;
-	border-radius:.25rem;
-	transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
-}
-
-
 
 /* For desktop */
 @media (min-width: 800px) {
