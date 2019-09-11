@@ -12,6 +12,10 @@ body {
 	 	background-color: #F5F5DC;
 }
 
+body a{
+	color: white;
+}
+
 .content {
 	width: 90%;
 	margin: auto;
@@ -19,7 +23,7 @@ body {
 
 /* car selection */
 .carselect{
-	border: solid black 1px;
+	border: solid black 2px;
 	border-radius: 3px;
 	margin: 10px;
 	padding: 0;
@@ -46,13 +50,17 @@ header, header a{
 	right: 20px;
 }
 
+.home a{
+	color: black;
+}
+
 /* Home summary */
 .homesummary, .homelog{
 	justify-content: center;
 }
 
 .summcard{
-	border: solid black 1px;
+	border: solid black 2px;
 	border-radius: 10px;
 	width: 90%;
 	text-align: center;
@@ -65,7 +73,7 @@ table {
 
 /* Home log */
 .log {
-	border: solid black 1px;
+	border: solid black 2px;
 	border-radius: 10px;
 	width: 90%;
 	text-align: center;
@@ -142,10 +150,7 @@ input {
 	background-color: transparent;
 }
 
-.btngroup {
-	display: flex;
-	margin-top: 5%;
-}
+
 
 button {
   background: #fff;
@@ -155,10 +160,6 @@ button {
   font-size: 16px;
   font-weight: bold;
   padding: 1rem;
-}
-
-.donebtn {
-	margin-left: 50%;
 }
 
 .btn {
@@ -175,6 +176,12 @@ button {
 	padding: 9px 23px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #2f6627;
+	width: 100px;
+}
+
+.btngroup {
+	display: flex;
+	margin-top: 5%;
 }
 
 .btn a{
@@ -182,6 +189,9 @@ button {
 	color: white;
 }
 
+.donebtn {
+	margin-left: 38%;
+}
 /* Bottom navigation  */
 .nav {
 	display: flex;
@@ -216,6 +226,10 @@ button {
 	box-shadow: inset 0px -3px 7px 0px #3dc21b;
 	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
 	background-color: #44c767;
+
+}
+.newentry a{
+	color: white;
 }
 
 .flex-item {
