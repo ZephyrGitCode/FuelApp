@@ -1,21 +1,42 @@
-/**
-* Save data from the form to storage
-* @param {Event} evt Click event
-* @return {undefined} No return value
-**/
-function saveDataClicked(evt) {
+document.querySelector(".entryform").addEventListener('submit', submitentry);
+
+function submitentry(evt) {
   evt.preventDefault();
 
-  var myKey = document.getElementById('keyInput').value;
-  var myValue = document.getElementById('valueInput').value;
-  localStorage.setItem(myKey, myValue);
-}
+  var odo = document.getElementById('odo').value;
+  var fuel = document.getElementById('fuel').value;
+  var cost = document.getElementById('cost').value;
+  var total = document.getElementById('total').value;
+  var date = document.getElementById('date').value;
 
-/**
+  /*
+  var totalkeys = localStorage.length;
+  console.log("total keys: ", localStorage.length;)
+  */
+  var entrykey = (localStorage.length + 1);
+
+  var entrydata = {};
+  var inputs = document.querySelectorAll('.entryform input');
+  for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].type !== 'button' && inputs[i].type !=='submit')
+      {
+        entrydata[inputs[i].id] = inputs[i].value;
+      };
+  };
+  var saveinputs = JSON.stringify(entrydata);
+  localStorage.setItem(2, saveinputs);
+  window.location.replace("../index.html");
+};
+
+/*
+.addEventListener('click', saveDataClicked);
+*/
+
+/*
 * Load data from storage and show in the table
 * @param {Event} evt Click event
 * @return {undefined} No return value
-**/
+
 function loadDataClicked(evt) {
   evt.preventDefault();
   document
@@ -29,7 +50,9 @@ function loadDataClicked(evt) {
   document.getElementById('keyInput').value = sKey
   document.getElementById('valueInput').value = sValue;
 }
+*/
 
+/*
 function deleteClicked(evt) {
   var key = evt.target.dataset.key;
 
@@ -38,13 +61,15 @@ function deleteClicked(evt) {
   console.log(sKeyR)
   localStorage.remove();
 }
+*/
 
-/**
+/*
 * Add a new row to the output table
 * @param {string} key The key value to show
 * @param {string} value The value to show
 * @return {Element} The table row object
-**/
+*/
+
 /*
 function showRow(key, value) {
   var keyCell = document.createElement('td');
@@ -70,11 +95,7 @@ function showRow(key, value) {
 }
 */
 
-/* Waiting for event trigger
-document
-  .getElementById('saveBtn')
-  .addEventListener('click', saveDataClicked);
-
+/*
 document
   .getElementById('loadBtn')
   .addEventListener('click', loadDataClicked);
