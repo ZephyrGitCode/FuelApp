@@ -6,12 +6,11 @@ for(var i = 1; i < (localStorage.length + 1); i++) {
   cost.innerHTML = "$"+data["total"];
   var row = document.createElement('tr');
   row.appendChild(cost);
-  
+
   document
     .querySelector('.logtable')
     .appendChild(row);
 };
-
 
 
 
@@ -38,13 +37,19 @@ function showRow(key, value) {
   return row;
 };
 
+document
+  .getElementById('delBtn')
+  .addEventListener('click', deleteClicked);
+
 function deleteClicked(evt) {
+  localStorage.clear();
+
+  /*
   var key = evt.target.dataset.key;
-
-
   var sKeyR = localStorage.key(3);
   console.log(sKeyR)
   localStorage.remove();
+  */
 };
 
 /* Waiting for event trigger
