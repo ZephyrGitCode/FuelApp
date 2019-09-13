@@ -26,21 +26,15 @@ for(var i = 1; i < (localStorage.length + 1); i++) {
     .querySelector('.logtable')
     .appendChild(nextrow);
 
-  var options = {body: 'Do you like my body?', vibrate: [200, 100, 200]}
-
-
-  Notification.requestPermission()
-    .then((response) => {
-    if (response === 'granted'){
-      var n = new Notification('Test notification',options);
-      n.vibrate
-    }
-  });
-
-
 };
-
-
+/*
+Notification.requestPermission()
+  .then((response) => {
+  if (response === 'granted'){
+    var n = new Notification('Test notification',options);
+    n.vibrate
+  }
+*/
 
 function showRow(key, value) {
   var keyCell = document.createElement('td');
