@@ -1,4 +1,4 @@
-for(var i = 1000; i > 0; i--) {
+for(var i = 20; i > 0; i--) {
   var data = JSON.parse(localStorage.getItem(i));
   if(data != null){
     var cost = document.createElement('td');
@@ -15,15 +15,14 @@ for(var i = 1000; i > 0; i--) {
     var deleteButton = document.createElement('button');
     deleteButton.setAttribute('class', 'btn');
     deleteButton.innerHTML = 'Delete';
-
     deleteButton.dataset.key = localStorage.key(i - 1);
-
     deleteButton.addEventListener('click', deleteClicked);
-
     deleteRow.appendChild(deleteButton);
 
     var row = document.createElement('tr');
     var nextrow = document.createElement('tr');
+
+    var line = document.createElement('hr');
 
     row.appendChild(date)
     row.appendChild(odo)
@@ -39,6 +38,12 @@ for(var i = 1000; i > 0; i--) {
     document
       .querySelector('.logtable')
       .appendChild(nextrow);
+
+    document
+      .querySelector('.logtable')
+      .appendChild(line);
+
+
   }
 };
 /*
@@ -50,9 +55,6 @@ Notification.requestPermission()
   }
 */
 
-document
-  .getElementById('delBtn')
-  .addEventListener('click', deleteClicked);
 
   function deleteClicked(evt) {
     /*

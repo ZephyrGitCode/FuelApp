@@ -10,34 +10,17 @@
 		<div class="content">
 			<header>
 				<p style="font-size:20px;">Reminders</p>
-				<div class="home">
-					<p><a href="../index.html">&#127968; Home</a></p>
-				</div>
 			</header>
-			<div class="homesummary">
-				<p>Monthly Summary</p>
-				<div class="summcard">
-					<table align="center">
-						<tr>
-							<td>$ </td>
-							<td> l</td>
-						</tr>
-						<tr>
-							<td>Date: </td>
-							<td>ODO: </td>
-						</tr>
-					</table>
+
+			<label for="datefield">Select a date: </label>
+			<input type="date" id="date" name="datefield" value="" style="text-align:right;">
+
+			<div class="btngroup">
+				<div class="bbtn">
+					<a href="../index.html"><button type="button" value="Back" class="btn" id="backbtn" name="backbtn">Home</button></a>
 				</div>
 			</div>
-			<div class="homelog">
-				<p>Fuel Log</p>
-				<div class="log">
-					<table align="center">
-						<tr><td>$ </td><td> l</td></tr>
-						<tr><td>Date: </td><td>ODO: </td></tr>
-					</table>
-				</div>
-			</div>
+
 		</div>
 
 		<nav class="nav">
@@ -63,6 +46,6 @@
 				</div></a>
 			</div>
 		</nav>
-		
+
   <script src="scripts/localstorage.js"></script>
 </html>
