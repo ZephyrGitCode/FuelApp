@@ -1,15 +1,42 @@
 for(var i = 1; i < (localStorage.length + 1); i++) {
   var data = JSON.parse(localStorage.getItem(i));
   var cost = document.createElement('td');
-  console.log("$"+data["total"]);
+  var litres = document.createElement('td');
+  var date = document.createElement('td');
+  var odo = document.createElement('td');
 
   cost.innerHTML = "$"+data["total"];
+  litres.innerHTML = data["fuel"]+"L";
+  date.innerHTML = "Date: " + data["date"];
+  odo.innerHTML = "ODO: " + data["odo"];
   var row = document.createElement('tr');
-  row.appendChild(cost);
+  var nextrow = document.createElement('tr');
+
+  row.appendChild(date)
+  row.appendChild(odo)
+
+  nextrow.appendChild(cost);
+  nextrow.appendChild(litres);
 
   document
     .querySelector('.logtable')
     .appendChild(row);
+
+  document
+    .querySelector('.logtable')
+    .appendChild(nextrow);
+
+  var options = {body: 'Do you like my body?', vibrate: [200, 100, 200]}
+
+
+  Notification.requestPermission()
+    .then((response) => {
+    if (response === 'granted'){
+      var n = new Notification('Test notification',options);
+    }
+  });
+
+
 };
 
 
