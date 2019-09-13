@@ -1,22 +1,3 @@
-
-/*
-localStorage.setItem(1,'meme');
-
-localStorage.setItem(2,'num2');
-
-localStorage.setItem(3,'threee2');
-
-localStorage.setItem(4,'fourrrr');
-
-for(var i=3; i < localStorage.length+1; i++) {
-  console.log(i);
-
-  var data = localStorage.getItem(i+1);
-  console.log('data is: ',data);
-  localStorage.setItem(i,data);
-}
-localStorage.removeItem(localStorage.length);
-*/
 for(var i = 1000; i > 0; i--) {
   var data = JSON.parse(localStorage.getItem(i));
   if(data != null){
@@ -89,7 +70,5 @@ document
       }
     }
     localStorage.removeItem(localStorage.length);
-    /*
     window.location.replace("index.html");
-    */
   };
