@@ -33,6 +33,7 @@ for(var i = 1; i < (localStorage.length + 1); i++) {
     .then((response) => {
     if (response === 'granted'){
       var n = new Notification('Test notification',options);
+      n.vibrate
     }
   });
 
