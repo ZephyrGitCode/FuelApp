@@ -21,7 +21,7 @@ for(var i = 20; i > 0; i--) {
 
     var deleteRow = document.createElement('td');
     var deleteButton = document.createElement('button');
-    deleteButton.setAttribute('class', 'btn');
+    deleteButton.setAttribute('class', 'delbtn');
     deleteButton.innerHTML = 'Delete';
     deleteButton.dataset.key = localStorage.key(i - 1);
     deleteButton.addEventListener('click', deleteClicked);
@@ -50,8 +50,6 @@ for(var i = 20; i > 0; i--) {
     document
       .querySelector('.logtable')
       .appendChild(line);
-
-
   }
 };
 /*
