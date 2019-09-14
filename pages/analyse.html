@@ -10,9 +10,6 @@
 		<div class="content">
 			<header>
 				<p style="font-size:20px;">Analyse</p>
-				<div class="home">
-					<p><a href="../index.html">&#127968; Home</a></p>
-				</div>
 			</header>
 
 			<div class="homesummary">
@@ -22,9 +19,7 @@
 				</div>
 
 				<div class="summcard">
-					<table align="center">
-						<tr><td>$ </td><td> l</td></tr>
-						<tr><td>Date: </td><td>ODO: </td></tr>
+					<table align="center" class="logtable">
 					</table>
 				</div>
 
@@ -62,12 +57,5 @@
 		</nav>
 
   </body>
-  <script src="../scripts/localstorage.js"></script>
-	<script>
-	const monthNames = ["January", "February", "March", "April", "May", "June",
-	"July", "August", "September", "October", "November", "December"];
-	var d = new Date();
-	var n = d.getMonth();
-	document.getElementById("cm").innerHTML = monthNames[d.getMonth()];
-	</script>
+  <script src="../scripts/analyse.js"></script>
 </html>

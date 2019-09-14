@@ -1,3 +1,11 @@
+if(localStorage.length === 0){
+  var empty = document.createElement('p');
+  empty.innerHTML = "No fuel entries";
+  document
+    .querySelector('.logtable')
+    .appendChild(empty);
+};
+
 for(var i = 20; i > 0; i--) {
   var data = JSON.parse(localStorage.getItem(i));
   if(data != null){
