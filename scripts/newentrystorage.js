@@ -1,5 +1,14 @@
 document.querySelector(".entryform").addEventListener('submit', submitentry);
 
+function calctotal(){
+  var fuelvalue = document.getElementById('fuel').value
+  if(fuelvalue != "" || fuelvalue != 0){
+    var currentcost = document.getElementById('cost').value;
+    totalcalc = document.getElementById('fuel').value * currentcost
+    document.getElementById('total').value = totalcalc
+  }
+}
+
 function submitentry(evt) {
   evt.preventDefault();
 
