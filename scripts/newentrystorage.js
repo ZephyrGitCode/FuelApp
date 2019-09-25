@@ -30,6 +30,13 @@ function submitentry(evt) {
   };
   var saveinputs = JSON.stringify(entrydata);
   var totalkeys = localStorage.length
-  localStorage.setItem(totalkeys + 1, saveinputs);
+  var count = 1
+  for(var i = localStorage.length; i >= 0; i--) {
+    var checkingdata = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    if(checkingdata != null){// && "total" in checkingdata){
+      count+=1
+    }
+  }
+  localStorage.setItem(count, saveinputs);
   window.location.replace("../index.html");
 };
