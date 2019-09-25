@@ -37,6 +37,6 @@ function submitentry(evt) {
       count+=1
     }
   }
-  localStorage.setItem(count, saveinputs);
+  localStorage.setItem(totalkeys+1, saveinputs);
   window.location.replace("../index.html");
 };

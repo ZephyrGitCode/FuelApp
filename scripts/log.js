@@ -22,12 +22,11 @@ for ( var i = 0, len = localStorage.length; i < len; ++i ) {
 
 for(var i = localStorage.length; i >= 0; i--) {
 */
-
 for(var i = 20; i > 0; i--){
   var data = JSON.parse(localStorage.getItem(i));
-  console.log("i is: ",i);
+  console.log("i is: ", i);
   console.log("storage key", localStorage.key(i));
-  console.log("data",data);
+  console.log("data", data);
   if(data != null){
     var cost = document.createElement('td');
     var litres = document.createElement('td');
@@ -115,12 +114,11 @@ function deleteClicked(evt) {
     }
     //localStorage.removeItem(localStorage.length)
 
-
-    deletelast(localStorage.length)
+    deletelast(localStorage.length+1)
     function deletelast(passedkey){
       var deldata = JSON.parse(localStorage.getItem(passedkey));
       console.log("deleting data", deldata);
-      if(deldata != null && "total" in deldata){
+      if(deldata != null){// && "total" in deldata){
         localStorage.removeItem(passedkey);
         }
       //else if (deldata == null) {return console.log("nothing happend",passedkey)}
