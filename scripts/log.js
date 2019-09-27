@@ -107,28 +107,19 @@ function deleteClicked(evt) {
   function deleteClicked(evt) {
 
     //localStorage.clear();
-    //var key = this.deleteButton.dataset.key
 
+    var key = parseInt(evt.target.dataset.key);
+    var count = key;
 
-    //console.log("removing key", key)
-    //localStorage.removeItem(key);
-    //console.log('Hello')
-
-
-    var key = evt.target.dataset.key;
-    var count = parseInt(key);
-    console.log("this key", key);
-    console.log("length", localStorage.length);
-    for(var i=parseInt(key); i < localStorage.length; i++) {
+    for(var i=key; i < localStorage.length; i++) {
       console.log("localStorage.getItem(i+1)",localStorage.getItem(i+1))
       if(localStorage.getItem(i+1) != null){// && "total" in JSON.parse(localStorage.getItem(i))){
         var data = localStorage.getItem(i+1);
         localStorage.setItem(i,data);
       }
-      count+=1
+      count+=1;
     }
-    //console.log("count: ",count);
-    localStorage.removeItem(localStorage.length);
+    localStorage.removeItem(count);
 
     /*
 
