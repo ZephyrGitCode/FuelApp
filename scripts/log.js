@@ -22,12 +22,12 @@ for ( var i = 0, len = localStorage.length; i < len; ++i ) {
 
 for(var i = localStorage.length; i >= 0; i--) {
 */
-for(var i = 20; i > 0; i--){
+
+for(var i = 20; i >= 0; i--){
+//for(var i = localStorage.length; i >= 0; i--) {
+//for(var i = 0; i < localStorage.length; i++) {
   var data = JSON.parse(localStorage.getItem(i));
-  console.log("i is: ", i);
-  console.log("storage key", localStorage.key(i));
-  console.log("data", data);
-  if(data != null){
+  if(data != null && "total" in data){
     var cost = document.createElement('td');
     var litres = document.createElement('td');
     var date = document.createElement('td');
@@ -42,8 +42,12 @@ for(var i = 20; i > 0; i--){
     var deleteButton = document.createElement('button');
     deleteButton.setAttribute('class', 'delbtn');
     deleteButton.innerHTML = 'Delete';
-    deleteButton.dataset.key = localStorage.key(i-1);
-    deleteButton.addEventListener('click', deleteClicked);
+
+    deleteButton.dataset.key = i; //localStorage.key(i)
+
+    console.log("key is ", i);
+
+    deleteButton.addEventListener('click', deleteClicked, false);
     deleteRow.appendChild(deleteButton);
 
     var row = document.createElement('tr');
@@ -103,16 +107,30 @@ function deleteClicked(evt) {
   function deleteClicked(evt) {
 
     //localStorage.clear();
+    //var key = this.deleteButton.dataset.key
+
+
+    //console.log("removing key", key)
+    //localStorage.removeItem(key);
+    //console.log('Hello')
+
 
     var key = evt.target.dataset.key;
+    var count = parseInt(key);
     console.log("this key", key);
-    for(var i=key; i < localStorage.length; i++) {
-      if(localStorage.getItem(i+1) != null && "total" in JSON.parse(localStorage.getItem(i))){
+    console.log("length", localStorage.length);
+    for(var i=parseInt(key); i < localStorage.length; i++) {
+      console.log("localStorage.getItem(i+1)",localStorage.getItem(i+1))
+      if(localStorage.getItem(i+1) != null){// && "total" in JSON.parse(localStorage.getItem(i))){
         var data = localStorage.getItem(i+1);
         localStorage.setItem(i,data);
       }
+      count+=1
     }
-    //localStorage.removeItem(localStorage.length)
+    //console.log("count: ",count);
+    localStorage.removeItem(localStorage.length);
+
+    /*
 
     deletelast(localStorage.length+1)
     function deletelast(passedkey){
@@ -121,9 +139,9 @@ function deleteClicked(evt) {
       if(deldata != null){// && "total" in deldata){
         localStorage.removeItem(passedkey);
         }
-      //else if (deldata == null) {return console.log("nothing happend",passedkey)}
+      else if (deldata == null) {return console.log("nothing happend",passedkey)}
         else{deletelast(passedkey-1)}
       };
-
+      */
     //window.location.replace("index.html");
   };

@@ -18,8 +18,6 @@ function submitentry(evt) {
   var total = document.getElementById('total').value;
   var date = document.getElementById('date').value;
 
-  var entrykey = (localStorage.length + 1);
-
   var entrydata = {};
   var inputs = document.querySelectorAll('.entryform input');
   for(var i = 0; i < inputs.length; i++) {
@@ -30,6 +28,8 @@ function submitentry(evt) {
   };
   var saveinputs = JSON.stringify(entrydata);
   var totalkeys = localStorage.length
+
+  /*
   var count = 1
   for(var i = localStorage.length; i >= 0; i--) {
     var checkingdata = JSON.parse(localStorage.getItem(localStorage.key(i)));
@@ -37,6 +37,7 @@ function submitentry(evt) {
       count+=1
     }
   }
-  localStorage.setItem(totalkeys+1, saveinputs);
+  */
+  localStorage.setItem(totalkeys +=1, saveinputs);
   window.location.replace("../index.html");
 };
