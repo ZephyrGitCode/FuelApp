@@ -1,13 +1,4 @@
 /*
-var count = 0;
-for ( var i = 0, len = localStorage.length; i < len; ++i ) {
-  var checkdata = JSON.parse(localStorage.getItem(localStorage.key(i)));
-  if(checkdata == null){
-    count+=1;
-    //localStorage.removeItem(i);
-  };
-};
-
 if(count != 0 || localStorage.length == 0){
   var empty = document.createElement('p');
   empty.innerHTML = "No fuel entries";
@@ -16,16 +7,19 @@ if(count != 0 || localStorage.length == 0){
     .appendChild(empty);
 };
 */
+
 /*
 for ( var i = 0, len = localStorage.length; i < len; ++i ) {
-  console.log( localStorage.getItem( localStorage.key( i ) ) );
-
-for(var i = localStorage.length; i >= 0; i--) {
+  //console.log( localStorage.getItem( localStorage.key( i ) ) );
+  console.log("this is the index", localStorage.key(i));
+}
 */
 
-for(var i = 20; i >= 0; i--){
 //for(var i = localStorage.length; i >= 0; i--) {
-//for(var i = 0; i < localStorage.length; i++) {
+//for(var i = 0; i < localStorage.length; i++)
+
+for(var i = 20; i >= 0; i--){
+
   var data = JSON.parse(localStorage.getItem(i));
   if(data != null && "total" in data){
     var cost = document.createElement('td');
@@ -120,6 +114,7 @@ function deleteClicked(evt) {
       count+=1;
     }
     localStorage.removeItem(count);
+    window.location.replace("index.html");
 
     /*
 
@@ -134,5 +129,5 @@ function deleteClicked(evt) {
         else{deletelast(passedkey-1)}
       };
       */
-    //window.location.replace("index.html");
+
   };
