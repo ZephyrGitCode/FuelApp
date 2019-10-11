@@ -260,6 +260,21 @@ nav a{
 	margin: 5px 5px 0 5px;
 }
 
+/* Analyse styling */
+.datedrop{
+	padding-bottom: 10px;
+}
+
+#datedrop{
+	font-size: 18px;
+	font-family: Arial;
+}
+
+#vl{
+	border-right: 2px solid black;
+}
+
+
 /* For desktop */
 @media (min-width: 800px) {
 
