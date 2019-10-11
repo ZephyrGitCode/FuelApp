@@ -4,7 +4,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 var d = new Date();
 var n = d.getMonth();
 document.getElementById("cm").innerHTML = monthNames[n];
-
+document.getElementById('datedrop').value = n;
 //for each local storage (already there)
 //for each month if(current local storage data is within the speceific month)
 //create a new div with totals of local storage(only if div doesn't exist)
