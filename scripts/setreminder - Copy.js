@@ -20,12 +20,11 @@ function submitentry(evt) {
 
   var inputs = document.querySelectorAll('.reminderform input');
   for(var i = 0; i < inputs.length; i++) {
-    if(inputs[i].type !== 'button' && inputs[i].type !=='submit')
+    if(inputs[i].type == 'date')
       {
         entrydata[inputs[i].id] = inputs[i].value;
       };
   };
-
   var saveinputs = JSON.stringify(entrydata);
 
   var count = 1
@@ -36,7 +35,7 @@ function submitentry(evt) {
   }
 }
   //var data = JSON.parse(localStorage.getItem(localStorage.key(count)));
-  
+
   localStorage.setItem("r"+(count), saveinputs);
   window.location.replace("../index.html");
 };

@@ -26,6 +26,7 @@ function submitentry(evt) {
         entrydata[inputs[i].id] = inputs[i].value;
       };
   };
+  
   var saveinputs = JSON.stringify(entrydata);
   var totalkeys = localStorage.length
 

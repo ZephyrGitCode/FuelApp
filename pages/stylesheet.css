@@ -151,6 +151,20 @@ input {
 	text-align: right;
 }
 
+textarea {
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #333;
+  font-size: 26px;
+  margin: 0 0 20px;
+  padding: .25rem .75rem;
+  width: 100%;
+	background-color: transparent;
+	text-align: right;
+}
+
+
+
 button{
   color: white;
   font-weight: bold;

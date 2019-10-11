@@ -19,8 +19,22 @@ for ( var i = 0, len = localStorage.length; i < len; ++i ) {
 //for(var i = 0; i < localStorage.length; i++)
 
 
-for(var i = 20; i >= 0; i--){
+const log = [];
 
+  for (var index = 0; index < localStorage.length; index++) {
+    var key = localStorage.key(index);
+    var value = JSON.parse(localStorage.getItem(key));
+    date = value["date"];
+    console.log(index, key, value, date);
+    log.push({title: key, body: value});
+  }
+
+  log.sort((a, b) => a.date> b.date).forEach((item) => {
+      showlog(item.title, item.body);
+      console.log(item.title, item.body);
+    })
+
+function showlog(i,ii){
   var data = JSON.parse(localStorage.getItem(i));
   if(data != null && "total" in data){
     var cost = document.createElement('td');
@@ -79,35 +93,35 @@ Notification.requestPermission()
   }
 */
 
-function deleteClicked(evt) {
+  function deleteClicked(evt) {
 
-  //localStorage.clear();
+    //localStorage.clear();
 
-  var key = parseInt(evt.target.dataset.key);
-  var count = key;
+    var key = parseInt(evt.target.dataset.key);
+    var count = key;
 
-  for(var i=key; i < localStorage.length; i++) {
-    console.log("localStorage.getItem(i+1)",localStorage.getItem(i+1))
-    if(localStorage.getItem(i+1) != null){// && "total" in JSON.parse(localStorage.getItem(i))){
-      var data = localStorage.getItem(i+1);
-      localStorage.setItem(i,data);
-    }
-    count+=1;
-  }
-  localStorage.removeItem(count);
-  window.location.replace("index.html");
-
-  /*
-  deletelast(localStorage.length+1)
-  function deletelast(passedkey){
-    var deldata = JSON.parse(localStorage.getItem(passedkey));
-    console.log("deleting data", deldata);
-    if(deldata != null){// && "total" in deldata){
-      localStorage.removeItem(passedkey);
+    for(var i=key; i < localStorage.length; i++) {
+      console.log("localStorage.getItem(i+1)",localStorage.getItem(i+1))
+      if(localStorage.getItem(i+1) != null){// && "total" in JSON.parse(localStorage.getItem(i))){
+        var data = localStorage.getItem(i+1);
+        localStorage.setItem(i,data);
       }
-    else if (deldata == null) {return console.log("nothing happend",passedkey)}
-      else{deletelast(passedkey-1)}
-    };
-  */
+      count+=1;
+    }
+    localStorage.removeItem(count);
+    window.location.replace("index.html");
+
+    /*
+    deletelast(localStorage.length+1)
+    function deletelast(passedkey){
+      var deldata = JSON.parse(localStorage.getItem(passedkey));
+      console.log("deleting data", deldata);
+      if(deldata != null){// && "total" in deldata){
+        localStorage.removeItem(passedkey);
+        }
+      else if (deldata == null) {return console.log("nothing happend",passedkey)}
+        else{deletelast(passedkey-1)}
+      };
+    */
 
   };

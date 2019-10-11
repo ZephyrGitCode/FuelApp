@@ -12,8 +12,14 @@
 				<p style="font-size:20px;">Reminders</p>
 			</header>
 			<form action="../index.html" class="reminderform"> <!--name="fuelform" class="entryform">-->
+				<label for="titlefield">Title:</label>
+				<input type="text" id="title" name="titlefield" placeholder="" style="text-align:left;"></input>
+
+				<label for="titlefield">Description: <span>(optional)</span></label>
+				<input type="text" id="desc" name="descfield" placeholder="" style="text-align:left;"></textarea>
+
 				<label for="datefield">Select a date: </label>
-				<input type="date" id="date" name="datefield" value="" class="rdate" style="text-align:right;">
+				<input type="date" id="date" name="datefield" value="" class="rdate"></input>
 
 				<div class="btngroup">
 					<div class="bbtn">
