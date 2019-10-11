@@ -35,7 +35,6 @@ function choosedate(evt) {
   document.getElementById("t").innerHTML = litrestotal+"L";
   document.getElementById("o").innerHTML = 0+"km";
 
-  console.log(odomath);
   if(odomath.length != 0){
     var maxodo = Math.max(...odomath);
     document.getElementById("o").innerHTML = maxodo+"km";
