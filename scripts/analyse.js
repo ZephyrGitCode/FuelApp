@@ -25,7 +25,7 @@ function choosedate(evt) {
       if(data["fuel"] != ""){
         litrestotal+=parseInt(data["fuel"]);
       };
-      if(data["odo"] != ""){ // !(isNaN())){
+      if(data["odo"] != ""){
         console.log(data["odo"]);
         console.log(isNaN());
         odomath.push(parseInt(data["odo"]));
@@ -41,16 +41,8 @@ function choosedate(evt) {
   console.log(odomath);
   if(odomath.length != 0){
     var maxodo = Math.max(...odomath);
-    console.log(maxodo);
-    var minodo = Math.min(...odomath);
-    console.log(minodo);
-    if(maxodo === minodo){
-      var calcodo = maxodo;
-    }else{
-      var calcodo = maxodo-minodo;
-    };
-    document.getElementById("o").innerHTML = calcodo+"km";
   };
+  document.getElementById("o").innerHTML = maxodo+"km";
 };
 
 document.getElementById('datedrop').addEventListener('click', choosedate);
