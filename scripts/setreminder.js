@@ -1,12 +1,16 @@
-// Dynammically update date
+// Default to today's date
+document.querySelector("#date").valueAsDate = new Date();
+
+// Dynammically update date based on current date
 const monthNames = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"];
 var d = new Date();
 var n = d.getMonth();
 
-
+// event listener on submit button
 document.querySelector(".reminderform").addEventListener('submit', submitentry);
 
+// save reminder function
 function submitentry(evt) {
   evt.preventDefault();
 
@@ -28,15 +32,8 @@ function submitentry(evt) {
 
   var saveinputs = JSON.stringify(entrydata);
 
-  var count = 1
-  for(var i = localStorage.length; i >= 0; i--) {
-  var checkingdata = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    if(checkingdata != null){// && !("total" in checkingdata)){
-    count+=1
-  }
-}
-  //var data = JSON.parse(localStorage.getItem(localStorage.key(count)));
-  
-  localStorage.setItem("r"+(count), saveinputs);
+  var totalkeys = localStorage.length
+
+  localStorage.setItem(totalkeys + 1, saveinputs);
   window.location.replace("../index.html");
 };

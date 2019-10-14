@@ -1,3 +1,4 @@
+document.querySelector("#date").valueAsDate = new Date();
 document.querySelector(".entryform").addEventListener('submit', submitentry);
 
 function calctotal(){
@@ -26,7 +27,7 @@ function submitentry(evt) {
         entrydata[inputs[i].id] = inputs[i].value;
       };
   };
-  
+
   var saveinputs = JSON.stringify(entrydata);
   var totalkeys = localStorage.length
 
@@ -39,6 +40,6 @@ function submitentry(evt) {
     }
   }
   */
-  localStorage.setItem(totalkeys +=1, saveinputs);
+  localStorage.setItem(totalkeys + 1, saveinputs);
   window.location.replace("../index.html");
 };
