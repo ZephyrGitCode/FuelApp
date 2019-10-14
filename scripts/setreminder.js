@@ -30,8 +30,8 @@ function submitentry(evt) {
       };
   };
 
+  // Saving inputs as data and (length of total keys + 1) for the key
   var saveinputs = JSON.stringify(entrydata);
-
   var totalkeys = localStorage.length
 
   localStorage.setItem(totalkeys + 1, saveinputs);

@@ -8,15 +8,6 @@ if(count != 0 || localStorage.length == 0){
 };
 */
 
-/*
-for ( var i = 0, len = localStorage.length; i < len; ++i ) {
-  //console.log( localStorage.getItem( localStorage.key( i ) ) );
-  console.log("this is the index", localStorage.key(i));
-}
-*/
-
-//for(var i = localStorage.length; i >= 0; i--) {
-//for(var i = 0; i < localStorage.length; i++)
 
 
 for(var i = 20; i >= 0; i--){
@@ -38,7 +29,7 @@ for(var i = 20; i >= 0; i--){
     deleteButton.setAttribute('class', 'delbtn');
     deleteButton.innerHTML = 'Delete';
 
-    deleteButton.dataset.key = i; //localStorage.key(i)
+    deleteButton.dataset.key = i;
 
     console.log("key is ", i);
 
@@ -70,25 +61,15 @@ for(var i = 20; i >= 0; i--){
       .appendChild(line);
   }
 };
-/*
-Notification.requestPermission()
-  .then((response) => {
-  if (response === 'granted'){
-    var n = new Notification('Test notification',options);
-    n.vibrate
-  }
-*/
+
 
 function deleteClicked(evt) {
-
-  //localStorage.clear();
 
   var key = parseInt(evt.target.dataset.key);
   var count = key;
 
   for(var i=key; i < localStorage.length; i++) {
-    console.log("localStorage.getItem(i+1)",localStorage.getItem(i+1))
-    if(localStorage.getItem(i+1) != null){// && "total" in JSON.parse(localStorage.getItem(i))){
+    if(localStorage.getItem(i+1) != null){
       var data = localStorage.getItem(i+1);
       localStorage.setItem(i,data);
     }
@@ -96,18 +77,5 @@ function deleteClicked(evt) {
   }
   localStorage.removeItem(count);
   window.location.replace("index.html");
-
-  /*
-  deletelast(localStorage.length+1)
-  function deletelast(passedkey){
-    var deldata = JSON.parse(localStorage.getItem(passedkey));
-    console.log("deleting data", deldata);
-    if(deldata != null){// && "total" in deldata){
-      localStorage.removeItem(passedkey);
-      }
-    else if (deldata == null) {return console.log("nothing happend",passedkey)}
-      else{deletelast(passedkey-1)}
-    };
-  */
 
   };
