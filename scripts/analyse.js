@@ -18,7 +18,8 @@ function choosedate(evt) {
   for(var i = 1; i < localStorage.length+1; i++) {
     var data = JSON.parse(localStorage.getItem(i));
 
-    if(data != null && (new Date(data["date"]).getMonth()) == select){
+    // Checking if localstorage is a new entry
+    if(data != null && (new Date(data["date"]).getMonth()) == select && "total" in data){
       if(data["total"] != ""){
         costtotal+=parseInt(data["total"]);
       };

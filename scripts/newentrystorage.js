@@ -1,3 +1,4 @@
+document.querySelector("#date").valueAsDate = new Date();
 document.querySelector(".entryform").addEventListener('submit', submitentry);
 
 function calctotal(){
@@ -9,6 +10,7 @@ function calctotal(){
   }
 }
 
+// function to save new entry values into local storage
 function submitentry(evt) {
   evt.preventDefault();
 
@@ -26,19 +28,11 @@ function submitentry(evt) {
         entrydata[inputs[i].id] = inputs[i].value;
       };
   };
-  
+
+  // Saving inputs as data and (length of total keys + 1) for the key
   var saveinputs = JSON.stringify(entrydata);
   var totalkeys = localStorage.length
 
-  /*
-  var count = 1
-  for(var i = localStorage.length; i >= 0; i--) {
-    var checkingdata = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    if(checkingdata != null){// && "total" in checkingdata){
-      count+=1
-    }
-  }
-  */
-  localStorage.setItem(totalkeys +=1, saveinputs);
+  localStorage.setItem(totalkeys + 1, saveinputs);
   window.location.replace("../index.html");
 };
