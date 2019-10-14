@@ -1,17 +1,7 @@
-/*
-if(count != 0 || localStorage.length == 0){
-  var empty = document.createElement('p');
-  empty.innerHTML = "No fuel entries";
-  document
-    .querySelector('.logtable')
-    .appendChild(empty);
-};
-*/
-
-
-
+// Dynamically list all fuel entries into log
 for(var i = 20; i >= 0; i--){
 
+  // Checks data in the latest 20 entries
   var data = JSON.parse(localStorage.getItem(i));
   if(data != null && "total" in data){
     var cost = document.createElement('td');
@@ -19,11 +9,13 @@ for(var i = 20; i >= 0; i--){
     var date = document.createElement('td');
     var odo = document.createElement('td');
 
+    // Writes the information to the page
     cost.innerHTML = "$"+data["total"];
     litres.innerHTML = data["fuel"]+"L";
     date.innerHTML = "Date: " + data["date"];
     odo.innerHTML = "ODO: " + data["odo"];
 
+    // Adds a delete button for each entry
     var deleteRow = document.createElement('td');
     var deleteButton = document.createElement('button');
     deleteButton.setAttribute('class', 'delbtn');
@@ -31,11 +23,10 @@ for(var i = 20; i >= 0; i--){
 
     deleteButton.dataset.key = i;
 
-    console.log("key is ", i);
-
     deleteButton.addEventListener('click', deleteClicked, false);
     deleteRow.appendChild(deleteButton);
 
+    // Appends information to a table for each local storage value
     var row = document.createElement('tr');
     var nextrow = document.createElement('tr');
 
@@ -48,6 +39,7 @@ for(var i = 20; i >= 0; i--){
     nextrow.appendChild(cost);
     nextrow.appendChild(litres);
 
+    // finds the table in the html to append to
     document
       .querySelector('.logtable')
       .appendChild(row);
@@ -59,7 +51,7 @@ for(var i = 20; i >= 0; i--){
     document
       .querySelector('.logtable')
       .appendChild(line);
-  }
+  };
 };
 
 
@@ -72,9 +64,9 @@ function deleteClicked(evt) {
     if(localStorage.getItem(i+1) != null){
       var data = localStorage.getItem(i+1);
       localStorage.setItem(i,data);
-    }
+    };
     count+=1;
-  }
+  };
   localStorage.removeItem(count);
   window.location.replace("index.html");
 

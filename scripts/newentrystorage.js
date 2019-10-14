@@ -1,6 +1,8 @@
+// Defaults new entry date to current day
 document.querySelector("#date").valueAsDate = new Date();
 document.querySelector(".entryform").addEventListener('submit', submitentry);
 
+// Calculates the total field based on price per litre and fuel litres
 function calctotal(){
   var fuelvalue = document.getElementById('fuel').value
   if(fuelvalue != "" || fuelvalue != 0){
@@ -8,7 +10,7 @@ function calctotal(){
     totalcalc = document.getElementById('fuel').value * currentcost
     document.getElementById('total').value = totalcalc
   }
-}
+};
 
 // function to save new entry values into local storage
 function submitentry(evt) {
@@ -20,6 +22,7 @@ function submitentry(evt) {
   var total = document.getElementById('total').value;
   var date = document.getElementById('date').value;
 
+  // goes through each input and saves their values
   var entrydata = {};
   var inputs = document.querySelectorAll('.entryform input');
   for(var i = 0; i < inputs.length; i++) {
@@ -33,6 +36,7 @@ function submitentry(evt) {
   var saveinputs = JSON.stringify(entrydata);
   var totalkeys = localStorage.length
 
+  // Save the new entry into local storage then reset the window
   localStorage.setItem(totalkeys + 1, saveinputs);
   window.location.replace("../index.html");
 };

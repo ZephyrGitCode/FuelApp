@@ -13,15 +13,12 @@ document.querySelector(".reminderform").addEventListener('submit', submitentry);
 // save reminder function
 function submitentry(evt) {
   evt.preventDefault();
-
   var title = document.getElementById('title').value;
   var desc = document.getElementById('desc').value;
   var date = document.getElementById('date').value;
 
-  var entrykey = (localStorage.length + 1);
-
+  // goes through each input and saves their value
   var entrydata = {};
-
   var inputs = document.querySelectorAll('.reminderform input');
   for(var i = 0; i < inputs.length; i++) {
     if(inputs[i].type !== 'button' && inputs[i].type !=='submit')
@@ -34,6 +31,7 @@ function submitentry(evt) {
   var saveinputs = JSON.stringify(entrydata);
   var totalkeys = localStorage.length
 
+  // Save the new entry into local storage then reset the window
   localStorage.setItem(totalkeys + 1, saveinputs);
   window.location.replace("../index.html");
 };
