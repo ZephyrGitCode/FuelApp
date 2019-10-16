@@ -41,10 +41,14 @@ function fuellog(evt) {
     // Checks data in the latest 20 entries
     var data = JSON.parse(localStorage.getItem(i));
     if(data != null && "total" in data){
-      var cost = document.createElement('td');
-      var litres = document.createElement('td');
       var date = document.createElement('td');
+      date.setAttribute('style', 'padding-left:12%;');
       var odo = document.createElement('td');
+      odo.setAttribute('style', 'padding-left:20%;;');
+      var cost = document.createElement('td');
+      cost.setAttribute('style', 'padding-left:20%;');
+      var litres = document.createElement('td');
+      litres.setAttribute('style', 'padding-left:20%;');
 
       // Writes the information to the page
       var thisdate = new Date(data["date"])
@@ -66,7 +70,6 @@ function fuellog(evt) {
 
       // Appends information to a table for each local storage value
       var rowone = document.createElement('tr');
-      rowone.setAttribute('style', 'text-align: left;');
       var rowtwo = document.createElement('tr');
       var rowthree = document.createElement('tr');
       var rowfour = document.createElement('tr');
@@ -88,14 +91,19 @@ function fuellog(evt) {
       // left side table data
       var datetext = document.createElement('td');
       datetext.innerHTML = "Date"
+      datetext.setAttribute('style', 'text-align: left;');
       var odotext = document.createElement('td');
       odotext.innerHTML = "ODO"
+      odotext.setAttribute('style', 'text-align: left;');
       var costtext = document.createElement('td');
       costtext.innerHTML = "Cost"
+      costtext.setAttribute('style', 'text-align: left;');
       var litrestext = document.createElement('td');
       litrestext.innerHTML = "Litres"
+      litrestext.setAttribute('style', 'text-align: left;');
 
       // Top row - date
+
       rowone.appendChild(datetext);
       rowone.appendChild(vline1);
       rowone.appendChild(date);
@@ -115,6 +123,10 @@ function fuellog(evt) {
       rowfour.appendChild(vline4);
       rowfour.appendChild(litres);
 
+      //var emptytd = document.createElement('td');
+      //var emptytd2 = document.createElement('td');
+      //rowfive.appendChild(emptytd);
+      //rowfive.appendChild(emptytd2);
       rowfive.appendChild(deleteRow);
 
       // finds the table, and appends each row
