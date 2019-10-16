@@ -33,5 +33,5 @@ function submitentry(evt) {
 
   // Save the new entry into local storage then reset the window
   localStorage.setItem(totalkeys + 1, saveinputs);
-  window.location.replace("../index.html");
+  window.location.replace("reminders.html");
 };
