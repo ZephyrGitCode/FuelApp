@@ -10,10 +10,10 @@ for(var i = 20; i >= 0; i--){
     var odo = document.createElement('td');
 
     // Writes the information to the page
+    date.innerHTML = data["date"];
+    odo.innerHTML = data["odo"];
     cost.innerHTML = "$"+data["total"];
     litres.innerHTML = data["fuel"]+"L";
-    date.innerHTML = "Date: " + data["date"];
-    odo.innerHTML = "ODO: " + data["odo"];
 
     // Adds a delete button for each entry
     var deleteRow = document.createElement('td');
@@ -27,26 +27,77 @@ for(var i = 20; i >= 0; i--){
     deleteRow.appendChild(deleteButton);
 
     // Appends information to a table for each local storage value
-    var row = document.createElement('tr');
-    var nextrow = document.createElement('tr');
+    var rowone = document.createElement('tr');
+    var rowtwo = document.createElement('tr');
+    var rowthree = document.createElement('tr');
+    var rowfour = document.createElement('tr');
+    var rowfive = document.createElement('tr');
 
+    // creates vertical lines
+    var vline1 = document.createElement('td');
+    vline1.setAttribute('id', 'vl');
+    var vline2 = document.createElement('td');
+    vline2.setAttribute('id', 'vl');
+    var vline3 = document.createElement('td');
+    vline3.setAttribute('id', 'vl');
+    var vline4 = document.createElement('td');
+    vline4.setAttribute('id', 'vl');
+
+    // Addes a line underneath each entry
     var line = document.createElement('hr');
 
-    row.appendChild(date)
-    row.appendChild(odo)
-    row.appendChild(deleteRow);
+    // left side table data
+    var datetext = document.createElement('td');
+    datetext.innerHTML = "Date"
+    var odotext = document.createElement('td');
+    odotext.innerHTML = "ODO"
+    var costtext = document.createElement('td');
+    costtext.innerHTML = "Cost"
+    var litrestext = document.createElement('td');
+    litrestext.innerHTML = "Litres"
 
-    nextrow.appendChild(cost);
-    nextrow.appendChild(litres);
+    // Top row - date
+    rowone.appendChild(datetext);
+    rowone.appendChild(vline1);
+    rowone.appendChild(date);
 
-    // finds the table in the html to append to
+    // Second row - ODO
+    rowtwo.appendChild(odotext);
+    rowtwo.appendChild(vline2);
+    rowtwo.appendChild(odo);
+
+    // Third row - Cost
+    rowthree.appendChild(costtext);
+    rowthree.appendChild(vline3);
+    rowthree.appendChild(cost);
+
+    // Fourth row - Litres
+    rowfour.appendChild(litrestext);
+    rowfour.appendChild(vline4);
+    rowfour.appendChild(litres);
+
+    rowfive.appendChild(deleteRow);
+
+    // finds the table, and appends each row
     document
       .querySelector('.logtable')
-      .appendChild(row);
+      .appendChild(rowone);
 
     document
       .querySelector('.logtable')
-      .appendChild(nextrow);
+      .appendChild(rowtwo);
+
+    document
+      .querySelector('.logtable')
+      .appendChild(rowthree);
+
+    document
+      .querySelector('.logtable')
+      .appendChild(rowfour);
+
+    document
+      .querySelector('.logtable')
+      .appendChild(rowfive);
 
     document
       .querySelector('.logtable')
