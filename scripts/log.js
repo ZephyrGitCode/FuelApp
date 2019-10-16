@@ -10,7 +10,8 @@ for(var i = 20; i >= 0; i--){
     var odo = document.createElement('td');
 
     // Writes the information to the page
-    date.innerHTML = data["date"];
+    var thisdate = new Date(data["date"])
+    date.innerHTML = `${thisdate.getDate()}/${thisdate.getMonth()}/${thisdate.getFullYear()}`;
     odo.innerHTML = data["odo"];
     cost.innerHTML = "$"+data["total"];
     litres.innerHTML = data["fuel"]+"L";
