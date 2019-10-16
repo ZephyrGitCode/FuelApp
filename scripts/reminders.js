@@ -1,57 +1,20 @@
-// Script for the current month summary
-function currentmonthsum(evt) {
-  var costtotal = 0;
-  var litrestotal = 0;
-  const odomath = [];
-
-  for(var i = 1; i < localStorage.length+1; i++) {
-    var data = JSON.parse(localStorage.getItem(i));
-
-    // Checking if localstorage is a new entry
-    if(data != null && (new Date(data["date"]).getMonth()) == new Date().getMonth() && "total" in data){
-      if(data["total"] != ""){
-        costtotal+=parseInt(data["total"]);
-      };
-      if(data["fuel"] != ""){
-        litrestotal+=parseInt(data["fuel"]);
-      };
-      if(data["odo"] != ""){
-        odomath.push(parseInt(data["odo"]));
-      };
-    };
-  };
-
-  // Inserts the html into the table
-  document.getElementById("c").innerHTML = "$"+costtotal;
-  document.getElementById("t").innerHTML = litrestotal+"L";
-  document.getElementById("o").innerHTML = 0+"km";
-
-  if(odomath.length != 0){
-    var maxodo = Math.max(...odomath);
-    document.getElementById("o").innerHTML = maxodo+"km";
-  };
-};
-
-currentmonthsum()
-
 // Dynamically list all fuel entries into log
-function fuellog(evt) {
+function reminderlog(evt) {
   for(var i = localStorage.length; i >= 0; i--){
 
     // Checks data in the latest 20 entries
     var data = JSON.parse(localStorage.getItem(i));
-    if(data != null && "total" in data){
-      var cost = document.createElement('td');
-      var litres = document.createElement('td');
+    if(data != null && "title" in data){
       var date = document.createElement('td');
-      var odo = document.createElement('td');
+      var title = document.createElement('td');
+      var desc = document.createElement('td');
+      desc.setAttribute('style', 'max-width: 50px; overflow: scroll;');
 
       // Writes the information to the page
       var thisdate = new Date(data["date"])
       date.innerHTML = `${thisdate.getDate()}/${thisdate.getMonth()}/${thisdate.getFullYear()}`;
-      odo.innerHTML = data["odo"];
-      cost.innerHTML = "$"+data["total"];
-      litres.innerHTML = data["fuel"]+"L";
+      title.innerHTML = data["title"];
+      desc.innerHTML = data["desc"];
 
       // Adds a delete button for each entry
       var deleteRow = document.createElement('td');
@@ -66,10 +29,8 @@ function fuellog(evt) {
 
       // Appends information to a table for each local storage value
       var rowone = document.createElement('tr');
-      rowone.setAttribute('style', 'text-align: left;');
       var rowtwo = document.createElement('tr');
       var rowthree = document.createElement('tr');
-      var rowfour = document.createElement('tr');
       var rowfive = document.createElement('tr');
 
       // creates vertical lines
@@ -79,8 +40,6 @@ function fuellog(evt) {
       vline2.setAttribute('id', 'vl');
       var vline3 = document.createElement('td');
       vline3.setAttribute('id', 'vl');
-      var vline4 = document.createElement('td');
-      vline4.setAttribute('id', 'vl');
 
       // Addes a line underneath each entry
       var line = document.createElement('hr');
@@ -88,32 +47,28 @@ function fuellog(evt) {
       // left side table data
       var datetext = document.createElement('td');
       datetext.innerHTML = "Date"
-      var odotext = document.createElement('td');
-      odotext.innerHTML = "ODO"
-      var costtext = document.createElement('td');
-      costtext.innerHTML = "Cost"
-      var litrestext = document.createElement('td');
-      litrestext.innerHTML = "Litres"
+      var titletext = document.createElement('td');
+      titletext.innerHTML = "Title"
+      var desctext = document.createElement('td');
 
-      // Top row - date
-      rowone.appendChild(datetext);
-      rowone.appendChild(vline1);
-      rowone.appendChild(date);
+      desctext.innerHTML = "Desc"
 
-      // Second row - ODO
-      rowtwo.appendChild(odotext);
-      rowtwo.appendChild(vline2);
-      rowtwo.appendChild(odo);
+      // First row - Title
+      rowone.appendChild(titletext);
+      rowone.appendChild(vline2);
+      rowone.appendChild(title);
 
-      // Third row - Cost
-      rowthree.appendChild(costtext);
-      rowthree.appendChild(vline3);
-      rowthree.appendChild(cost);
+      // Second row - Description
+      rowtwo.appendChild(desctext);
+      rowtwo.appendChild(vline3);
+      rowtwo.appendChild(desc);
 
-      // Fourth row - Litres
-      rowfour.appendChild(litrestext);
-      rowfour.appendChild(vline4);
-      rowfour.appendChild(litres);
+
+      // Third row - Date
+      rowthree.appendChild(datetext);
+      rowthree.appendChild(vline1);
+      rowthree.appendChild(date);
+
 
       rowfive.appendChild(deleteRow);
 
@@ -132,10 +87,6 @@ function fuellog(evt) {
 
       document
         .querySelector('.logtable')
-        .appendChild(rowfour);
-
-      document
-        .querySelector('.logtable')
         .appendChild(rowfive);
 
       document
@@ -145,7 +96,7 @@ function fuellog(evt) {
   };
 };
 
-fuellog();
+reminderlog();
 
 // Function for when delete is clicked
 function deleteClicked(evt) {
@@ -163,5 +114,5 @@ function deleteClicked(evt) {
   localStorage.removeItem(count);
 
   // Reloads the window
-  window.location.replace("index.html");
+  window.location.replace("reminders.html");
   };
