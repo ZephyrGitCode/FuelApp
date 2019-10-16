@@ -2,64 +2,70 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<link href="stylesheet.css" rel="stylesheet">
+		<link href="pages/stylesheet.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<title>Fuel_Log</title>
 	</head>
   <body>
 		<div class="content">
+
 			<header>
-				<p style="font-size:20px;">Reminders</p>
-			</header>
-			<form action="../index.html" class="reminderform"> <!--name="fuelform" class="entryform">-->
-				<label for="titlefield">Title:</label>
-				<input type="text" id="title" name="titlefield" placeholder="" style="text-align:left;"></input>
-
-				<label for="titlefield">Description: <span>(optional)</span></label>
-				<input type="text" id="desc" name="descfield" placeholder="" style="text-align:left;"></textarea>
-
-				<label for="datefield">Select a date: </label>
-				<input type="date" id="date" name="datefield" value="" class="rdate"></input>
-
-				<div class="btngroup">
-					<div class="bbtn">
-						<a href="../index.html"><button type="button" value="Back" class="btn" id="backbtn" name="backbtn">Home</button></a>
-					</div>
-					<div class="donebtn">
-						<button type="submit" class="btn" id="savebtn">Save</button>
-					</div>
+				<div class="carselect">
+					<h2>Car 1</h2>
 				</div>
+			</header>
 
+			<div class="homesummary">
+				<p>Current Month Summary</p>
+				<div class="summcard">
+					<table align="center">
+						<tr><td>$ </td><td> l</td></tr>
+					</table>
+				</div>
+			</div>
 
-			</form>
-
+			<div class="homelog">
+				<p>Fuel Log</p>
+				<div class="log" style="overflow-y: scroll;min-height:50px;max-height:200px;">
+					<table align="center" class="logtable">
+					</table>
+				</div>
+			</div>
 
 
 		</div>
 
+		<a href="pages/newentry.html">
+			<div class="newentry">
+				<h2>New Entry</h2>
+			</div>
+		</a>
+
+
 		<nav class="nav">
 			<div class="flex-container">
-				<a href="analyse.html">
+				<a href="pages/analyse.html">
 				<div class="flex-item">
 					<p>Analyse Expenses</p>
 				</div></a>
 			</div>
 			<div class="flex-container">
-				<a href="reminders.html"><div class="flex-item">
+				<a href="pages/reminders.html"><div class="flex-item">
 					<p>Set Reminders</p>
 				</div></a>
 			</div>
 			<div class="flex-container">
-				<a href="services.html"><div class="flex-item">
+				<a href="pages/services.html"><div class="flex-item">
 					<p>Local Services</p>
 				</div></a>
 			</div>
 			<div class="flex-container">
-				<a href="fuelmap.html"><div class="flex-item">
+				<a href="pages/fuelmap.html"><div class="flex-item">
 					<p>Fuel Map</p>
 				</div></a>
 			</div>
 		</nav>
 
-  <script src="../scripts/setreminder.js"></script>
+  </body>
+  <script src="scripts/log.js"></script>
 </html>
