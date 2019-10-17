@@ -1,4 +1,4 @@
-/* General styles */
+/* General styles #F5F5DC */
 * {
 	box-sizing: border-box;
 }
@@ -9,7 +9,8 @@ body {
    height:100%;
 	 font-family: Arial;
 	 font-size: 18px;
-	 	background-color: #F5F5DC;
+	 background-color: #202833;
+	 color: #66fcf1;
 }
 
 body a{
@@ -23,7 +24,7 @@ body a{
 
 /* car selection */
 .carselect{
-	border: solid black 2px;
+	border: solid #c5c6c8 2px;
 	border-radius: 3px;
 	margin: 10px;
 	padding: 0;
@@ -60,7 +61,7 @@ header, header a{
 }
 
 .summcard{
-	border: solid black 2px;
+	border: solid #c5c6c8 2px;
 	border-radius: 10px;
 	width: 90%;
 	text-align: center;
@@ -75,7 +76,7 @@ table {
 
 /* Home log */
 .log {
-	border: solid black 2px;
+	border: solid #c5c6c8 2px;
 	border-radius: 10px;
 	width: 90%;
 	text-align: center;
@@ -94,7 +95,7 @@ table {
 	margin: 0 20% 0 20%;
 	height: 80px;
 	box-shadow: inset 0px -3px 7px 0px #3dc21b;
-	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background: linear-gradient(to bottom, #1c4c29 5%, #5cbf2a 100%);
 	background-color: #44c767;
 	border-radius: 10px;
 	border: 1px solid #18ab29;
@@ -120,8 +121,8 @@ table {
 
 /* new entry page */
 .entry span{
-	color:grey;
-	font-size:16px;
+	color: #c5c6c8;
+	font-size: 16px;
 }
 
 .cost {
@@ -145,9 +146,9 @@ label {
 }
 
 input {
-  border: 2px solid #333;
+  border: 2px solid #c5c6c8;
   border-radius: 5px;
-  color: #333;
+  color: #c5c6c8;
   font-size: 26px;
   margin: 0 0 20px;
   padding: .25rem .75rem;
@@ -176,7 +177,7 @@ button{
 }
 
 .btn {
-	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background: linear-gradient(to bottom, #1c4c29 5%, #5cbf2a 100%);
 	border-radius: 10px;
 	border: 1px solid #18ab29;
 	display: inline-block;
@@ -249,7 +250,7 @@ nav a{
   text-align: center;
 	border: 1px solid #333;
 	box-shadow: inset 0px -3px 7px 0px #3dc21b;
-	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background: linear-gradient(to bottom, #1c4c29 5%, #5cbf2a 100%);
 	background-color: #44c767;
 
 }
@@ -301,7 +302,7 @@ nav a{
 	background: transparent;
 	text-decoration: underline;
 	font-size: 16px;
-  color: #444;
+  color: #66fcf1;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -311,9 +312,6 @@ nav a{
   transition: 0.4s;
 }
 
-.inneracc{
-	background-color: #d4d4ad;
-}
 
 #box::after {
 	content: '+'
@@ -324,11 +322,23 @@ nav a{
 }
 
 .panel {
-	background-color: #d4d4ad;
+	background-color: #202833;
   padding: 0 18px;
   display: none;
   overflow: hidden;
 	font-size: 12px;
+	border: 1px #c5c6c8 solid;
+	margin-right: 5px;
+}
+
+#panel2 {
+	background-color: #ffffff;
+	color: #000;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+	font-size: 12px;
+	border: 1px black solid;
 }
 
 #box{
@@ -337,7 +347,7 @@ nav a{
 	width: 20px;
 	height: 20px;
 	text-align: center;
-	background-color: #e4e48e;
+	background-color: #202833;
 }
 
 #b {
@@ -355,9 +365,10 @@ nav a{
 	font-size: 15px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #2f6627;
-	height: 20px;
+	height: 25px;
 	width: 50px;
 	float: right;
+	margin-bottom: 5px;
 }
 
 
