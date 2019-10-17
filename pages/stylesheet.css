@@ -65,6 +65,8 @@ header, header a{
 	width: 90%;
 	text-align: center;
 	margin: auto;
+	max-height: 280px;
+	overflow-y: scroll;
 }
 
 table {
@@ -78,6 +80,9 @@ table {
 	width: 90%;
 	text-align: center;
 	margin: auto;
+	overflow-y: scroll;
+	min-height:50px;
+	max-height:200px;
 }
 
 /* New Entry button + new entry page styling */
@@ -306,6 +311,10 @@ nav a{
   transition: 0.4s;
 }
 
+.inneracc{
+	background-color: #d4d4ad;
+}
+
 #box::after {
 	content: '+'
 }
@@ -315,12 +324,10 @@ nav a{
 }
 
 .panel {
+	background-color: #d4d4ad;
   padding: 0 18px;
   display: none;
   overflow: hidden;
-}
-
-.panel {
 	font-size: 12px;
 }
 
@@ -333,8 +340,25 @@ nav a{
 	background-color: #e4e48e;
 }
 
+#b {
+	font-weight: 700;
+	font-size: 14px;
+}
 
-
+.mapbtn {
+	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	border-radius: 10px;
+	border: 1px solid #18ab29;
+	display: inline-block;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 15px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #2f6627;
+	height: 20px;
+	width: 50px;
+	float: right;
+}
 
 
 /* For desktop */
