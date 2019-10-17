@@ -273,6 +273,68 @@ nav a{
 #vl{
 	border-right: 2px solid black;
 }
+/* Local services */
+.localcontent{
+	display: inline-grid;
+	justify-content: center;
+}
+
+.locallabel {
+	display: block;
+	font: 1rem 'Fira Sans', sans-serif;
+	float:right;
+}
+
+#localsearch{
+		font-size: 20px;
+		width: 70%;
+		float:right;
+		text-align: left;
+}
+
+.accordion {
+	background: transparent;
+	text-decoration: underline;
+	font-size: 16px;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+#box::after {
+	content: '+'
+}
+
+.active #box::after {
+	content: '-'
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.panel {
+	font-size: 12px;
+}
+
+#box{
+	border: 1px solid black;
+	float: right;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	background-color: #e4e48e;
+}
+
+
+
 
 
 /* For desktop */
