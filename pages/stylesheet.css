@@ -316,7 +316,6 @@ nav a{
   transition: 0.4s;
 }
 
-
 #box::after {
 	content: '+'
 }
@@ -326,23 +325,25 @@ nav a{
 }
 
 .panel {
-	background-color: #202833;
+	background-color: #f5f5dc;
   padding: 0 18px;
   display: none;
   overflow: hidden;
 	font-size: 12px;
-	border: 1px #c5c6c8 solid;
+	border: 2px black solid;
 	margin-right: 5px;
 }
 
 #panel2 {
-	background-color: #f5f5dc;
-	color: #000;
+	background-color: #27303e;
+	color: #ffffff;
   padding: 0 18px;
   display: none;
   overflow: hidden;
 	font-size: 12px;
-	border: 1px black solid;
+	border: 2px black solid;
+	margin-right: 5px;
+	margin-bottom: 5px;
 }
 
 #box{
@@ -381,7 +382,7 @@ nav a{
   color: white;
 }
 
-.dark-mode h1, .dark-mode .summcard, .dark-mode .log,  {
+.dark-mode h1, .dark-mode .summcard, .dark-mode .log, .dark-mode .panel, .dark-mode #panel2, .dark-mode #box  {
   color: white;
 	border: 2px solid #c5c6c8;
 }
@@ -389,12 +390,17 @@ nav a{
 .dark-mode .accordion {
 	color: white;
 }
-.dark-mode #box{
+.dark-mode #box, .dark-mode .panel {
 	background-color: #27303e;
 }
 .dark-mode #vl {
 	border-right: 2px solid white;
 }
+.dark-mode #panel2{
+	color: #000;
+	background-color: #f5f5dc;
+}
+
 
 .light-mode {
   background-color: #f5f5dc;
