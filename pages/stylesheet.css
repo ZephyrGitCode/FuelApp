@@ -127,7 +127,7 @@ table {
 
 /* new entry page */
 .entry span{
-	color: #c5c6c8;
+	color: #000;
 	font-size: 16px;
 }
 
@@ -152,9 +152,9 @@ label {
 }
 
 input {
-  border: 2px solid #c5c6c8;
+  border: 2px solid #000;
   border-radius: 5px;
-  color: #c5c6c8;
+  color: #000;
   font-size: 26px;
   margin: 0 0 20px;
   padding: .25rem .75rem;
@@ -387,8 +387,11 @@ nav a{
 	border: 2px solid #c5c6c8;
 }
 
-.dark-mode .accordion {
+.dark-mode .accordion, .dark-mode input, .dark-mode span {
 	color: white;
+}
+.dark-mode input{
+	border: 2px white solid;
 }
 .dark-mode #box, .dark-mode .panel {
 	background-color: #27303e;
@@ -400,7 +403,6 @@ nav a{
 	color: #000;
 	background-color: #f5f5dc;
 }
-
 
 .light-mode {
   background-color: #f5f5dc;
