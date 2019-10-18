@@ -8,11 +8,13 @@ for (i = 0; i < acc.length; i++) {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
     this.classList.toggle("active");
+    this.setAttribute("style","color: purple;");
 
     /* Toggle between hiding and showing the active panel */
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
+      this.setAttribute("style","color: #ffffff");
     } else {
       panel.style.display = "block";
 

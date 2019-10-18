@@ -316,6 +316,10 @@ nav a{
   transition: 0.4s;
 }
 
+#purple {
+	color: purple;
+}
+
 #box::after {
 	content: '+'
 }
@@ -420,11 +424,6 @@ nav a{
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
-}
-
-.dark-button:hover {
-	background-color: purple;
-	color: white;
 }
 /* End dark mode */
 
