@@ -30,8 +30,8 @@ function submitentry(evt) {
   // Saving inputs as data and (length of total keys + 1) for the key
   var saveinputs = JSON.stringify(entrydata);
   var totalkeys = localStorage.length
-
+  console.log(saveinputs);
   // Save the new entry into local storage then reset the window
   localStorage.setItem(totalkeys + 1, saveinputs);
-  window.location.replace("reminders.html");
+  window.location.href = "reminders.html";
 };

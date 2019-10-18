@@ -36,7 +36,7 @@ currentmonthsum()
 
 // Dynamically list all fuel entries into log
 function fuellog(evt) {
-  for(var i = localStorage.length; i >= 0; i--){
+  for(var i = localStorage.length; i >= 1; i--){
 
     // Checks data in the latest 20 entries
     var data = JSON.parse(localStorage.getItem(i));
@@ -52,7 +52,7 @@ function fuellog(evt) {
 
       // Writes the information to the page
       var thisdate = new Date(data["date"])
-      date.innerHTML = `${thisdate.getDate()}/${thisdate.getMonth()}/${thisdate.getFullYear()}`;
+      date.innerHTML = `${thisdate.getDate()}/${thisdate.getMonth()+1}/${thisdate.getFullYear()}`;
       odo.innerHTML = data["odo"];
       cost.innerHTML = "$"+data["total"];
       litres.innerHTML = data["fuel"]+"L";
@@ -175,5 +175,5 @@ function deleteClicked(evt) {
   localStorage.removeItem(count);
 
   // Reloads the window
-  window.location.replace("index.html");
+  window.location.href = "index.html";
   };

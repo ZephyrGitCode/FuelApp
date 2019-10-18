@@ -1,6 +1,6 @@
 // Dynamically list all fuel entries into log
 function reminderlog(evt) {
-  for(var i = localStorage.length; i >= 0; i--){
+  for(var i = localStorage.length; i >= 1; i--){
 
     // Checks data in the latest 20 entries
     var data = JSON.parse(localStorage.getItem(i));
@@ -12,7 +12,7 @@ function reminderlog(evt) {
 
       // Writes the information to the page
       var thisdate = new Date(data["date"])
-      date.innerHTML = `${thisdate.getDate()}/${thisdate.getMonth()}/${thisdate.getFullYear()}`;
+      date.innerHTML = `${thisdate.getDate()}/${thisdate.getMonth()+1}/${thisdate.getFullYear()}`;
       title.innerHTML = data["title"];
       desc.innerHTML = data["desc"];
 
@@ -114,5 +114,5 @@ function deleteClicked(evt) {
   localStorage.removeItem(count);
 
   // Reloads the window
-  window.location.replace("reminders.html");
+  window.location.href = "../index.html";
   };

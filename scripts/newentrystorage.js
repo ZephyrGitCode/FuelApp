@@ -7,7 +7,9 @@ function calctotal(){
   var fuelvalue = document.getElementById('fuel').value
   if(fuelvalue != "" || fuelvalue != 0){
     var currentcost = document.getElementById('cost').value;
-    totalcalc = document.getElementById('fuel').value * currentcost
+    var totalcalc = document.getElementById('fuel').value * currentcost
+    totalcalc = parseFloat(totalcalc).toFixed(2);
+    console.log(totalcalc);
     document.getElementById('total').value = totalcalc
   }
 };
@@ -38,5 +40,6 @@ function submitentry(evt) {
 
   // Save the new entry into local storage then reset the window
   localStorage.setItem(totalkeys + 1, saveinputs);
-  window.location.replace("../index.html");
+  //window.location.replace("../index.html");
+  window.location.href = "../index.html"
 };
