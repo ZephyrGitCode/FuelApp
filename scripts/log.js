@@ -123,10 +123,7 @@ function fuellog(evt) {
       rowfour.appendChild(vline4);
       rowfour.appendChild(litres);
 
-      //var emptytd = document.createElement('td');
-      //var emptytd2 = document.createElement('td');
-      //rowfive.appendChild(emptytd);
-      //rowfive.appendChild(emptytd2);
+      // Fith row - delete button
       rowfive.appendChild(deleteRow);
 
       // finds the table, and appends each row
