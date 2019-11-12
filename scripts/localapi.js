@@ -3,15 +3,10 @@
 
 const url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=shops&key=AIzaSyCYtSvriljMuTDh3Xc2ZkCBR4WHaJ5ohtI"
 
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-
-httpGet(url)
+fetch(url)
+.then(response=>{
+  return console.log(response.json())
+  })
 
 /*
 const otherparams = {
