@@ -15,7 +15,13 @@ const otherparams = {
   body:undefined
 };
 
-fetch(url,otherparams).then(data=>{return data.json()}).then(res=>{console.log(res)});
+fetch(url,otherparams)
+  .then(response=>{
+    return console.log(response.json())
+    })
+  .then(res=>{
+    console.log(res)
+    });
 
 /*
 
