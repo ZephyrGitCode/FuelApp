@@ -1,9 +1,9 @@
 
 // map view of surrounding things in search or on clicked parent
 
-const url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=shops&key=AIzaSyCYtSvriljMuTDh3Xc2ZkCBR4WHaJ5ohtI"
+const url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=shops&key="
 
-fetch(url)
+fetch(url,{method:"post",mode:"cors"})
 .then(response=>{
   return console.log(response.json())
   })
@@ -31,7 +31,7 @@ fetch(url,otherparams)
 */
 /*
 
-"Authorization":"AIzaSyCYtSvriljMuTDh3Xc2ZkCBR4WHaJ5ohtI;",
+"Authorization":"",
 'Access-Control-Allow-Origin': "https://zephyrgitcode.github.io/FuelApp/",
 'Access-Control-Allow-Credentials': true,
 'Access-Control-Allow-Methods':'POST, GET'
@@ -41,5 +41,5 @@ https://maps.googleapis.com/maps/api/place/nearbysearch/json
   &radius=500
   &types=food
   &name=harbour
-  &key=AIzaSyCYtSvriljMuTDh3Xc2ZkCBR4WHaJ5ohtI
+  &key=
 */
