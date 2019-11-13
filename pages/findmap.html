@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link href="stylesheet.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<title>Fuel_Log</title>
+	</head>
+  <body id="body">
+		<div class="content">
+			<header>
+				<h3>Find Location</h3>
+				<button type="button" name="dark_light" title="Toggle dark/light mode" class="dark-button" id="darkbtn">Dark Mode 🌛</button>
+			</header>
+			<div class="homesummary" style="margin-top: 15px;">
+				<div id="map"></div>
+			</div>
+			<div class="btngroup">
+				<div class="bbtn">
+					<a href="../index.html"><button type="button" value="Back" class="btn" id="backbtn" name="backbtn">Home</button></a>
+				</div>
+			</div>
+
+		</div>
+
+		<nav class="nav">
+			<div class="flex-container">
+				<a href="analyse.html">
+				<div class="flex-item">
+					<p>Analyse Expenses</p>
+				</div></a>
+			</div>
+			<div class="flex-container">
+				<a href="reminders.html"><div class="flex-item">
+					<p>Set Reminders</p>
+				</div></a>
+			</div>
+			<div class="flex-container">
+				<a href="services.html"><div class="flex-item">
+					<p>Local Services</p>
+				</div></a>
+			</div>
+			<div class="flex-container">
+				<a href="fuelmap.html"><div class="flex-item">
+					<p>Fuel Map</p>
+				</div></a>
+			</div>
+		</nav>
+
+  </body>
+	<script src="../scripts/darkmode.js"></script>
+	<script src="../scripts/localapi.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYtSvriljMuTDh3Xc2ZkCBR4WHaJ5ohtI&libraries=places&callback=initMap" async defer></script>
+</html>

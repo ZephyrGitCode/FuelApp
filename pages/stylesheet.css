@@ -380,6 +380,12 @@ nav a{
 	margin-bottom: 5px;
 }
 
+/* find location */
+#map {
+	height: 100%;
+}
+/* End Find location */
+
 /* Dark mode */
 .dark-mode {
   background-color: #27303e;
