@@ -5,20 +5,23 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+
 var map;
 var service;
 var infowindow;
 
 function initMap() {
-  var sydney = new google.maps.LatLng(-33.867, 151.195);
+  var darwincity = new google.maps.LatLng(12.4634, 130.8456);
+  var darwincaz = new google.maps.LatLng(12.3733, 130.8817);
+  var palmo = new google.maps.LatLng(12.4785, 130.9852);
 
   infowindow = new google.maps.InfoWindow();
 
   map = new google.maps.Map(
-      document.getElementById('map'), {center: sydney, zoom: 15});
+      document.getElementById('map'), {center: darwincity, zoom: 15});
 
   var request = {
-    query: 'Museum of Contemporary Art Australia',
+    query: 'Jingili Water Gardens',
     fields: ['name', 'geometry'],
   };
 
@@ -35,6 +38,7 @@ function initMap() {
   });
 }
 
+
 function createMarker(place) {
   var marker = new google.maps.Marker({
     map: map,
@@ -46,6 +50,8 @@ function createMarker(place) {
     infowindow.open(map, this);
   });
 }
+
+
 /*
 
 const url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=shops&key="
