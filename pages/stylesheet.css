@@ -9,7 +9,7 @@ body {
    height:100%;
 	 font-family: Arial;
 	 font-size: 18px;
-	 background-color: #f5f5dc;
+	 background-color: #EBEBEB;
 	 color: #000;
 }
 
@@ -104,7 +104,7 @@ table {
 	bottom: 100px;
 	width: 40%;
 	margin: 0 30% 0 30%;
-	height: 50px;
+	height: 60px;
 	box-shadow: inset 0px -3px 7px 0px #3dc21b;
 	background: linear-gradient(to bottom, #44a75f 5%, #5cbf2a 100%);
 	background-color: #44c767;
@@ -421,7 +421,7 @@ html, body {
 }
 
 .light-mode {
-  background-color: #adadad59;	#f5f5dc;
+  background-color: #EBEBEB;	#f5f5dc;
   color: black;
 }
 
