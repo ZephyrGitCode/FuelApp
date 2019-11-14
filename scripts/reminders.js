@@ -114,5 +114,5 @@ function deleteClicked(evt) {
   localStorage.removeItem(count);
 
   // Reloads the window
-  window.location.href = "../index.html";
+  window.location.href = "reminders.html";
   };

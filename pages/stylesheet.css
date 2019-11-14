@@ -238,7 +238,6 @@ nav {
 	line-height: 1.25;
 	text-align: center;
 	font-family: sans-serif;
-	text-shadow: 0 1px 0 #84BAFF;
 	text-decoration: none;
 }
 
@@ -257,7 +256,7 @@ nav a{
   align-items: flex-start;
   text-align: center;
 	border: 1px solid #333;
-	background-color: #000;
+	background-color: #333;
 
 }
 .newentry a{
