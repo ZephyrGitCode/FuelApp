@@ -14,7 +14,11 @@ for (i = 0; i < acc.length; i++) {
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
-      this.setAttribute("style","color: #ffffff");
+      if (localStorage.getItem(0,currentClass) === "dark-mode"){
+        this.setAttribute("style","color: #000");
+      }else if(localStorage.getItem(0,currentClass) === "dark-mode"){
+        this.setAttribute("style","color: #ffffff");
+      }
     } else {
       panel.style.display = "block";
 

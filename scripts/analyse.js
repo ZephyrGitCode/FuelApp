@@ -6,7 +6,7 @@ var n = d.getMonth();
 
 document.getElementById('datedrop').value = n;
 
-choosedate()
+
 
 function choosedate(evt) {
   var costtotal = 0;
@@ -42,4 +42,6 @@ function choosedate(evt) {
   };
 };
 
-document.getElementById('datedrop').addEventListener('click', choosedate);
+document.getElementById('datedrop').addEventListener('change', choosedate);
+
+choosedate()
