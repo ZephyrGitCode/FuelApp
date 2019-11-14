@@ -5,7 +5,40 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+var map;
+var service;
+var infowindow;
 
+function initMap() {
+  var pyrmont = new google.maps.LatLng(12.4634,130.8456);
+
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: pyrmont,
+      zoom: 15
+    });
+
+  var request = {
+    location: pyrmont,
+    radius: '200',
+    type: ['restaurant']
+  };
+
+  service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      //createMarker(results[i]);
+      console.log(results[i]);
+    }
+  }
+}
+
+
+/*
 var map;
 var service;
 var infowindow;
@@ -15,30 +48,54 @@ function initMap() {
   var darwincaz = new google.maps.LatLng(12.3733, 130.8817);
   var palmo = new google.maps.LatLng(12.4785, 130.9852);
 
-  infowindow = new google.maps.InfoWindow();
+  //infowindow = new google.maps.InfoWindow();
 
   map = new google.maps.Map(
-      document.getElementById('map'), {center: darwincity, zoom: 15});
+      document.getElementById('map'), {center: palmo, zoom: 15});
 
   var request = {
-    query: 'Jingili Water Gardens',
-    fields: ['name', 'geometry'],
+    location: 'palmo',
+    radius: '500',
+    type: ['resturant'],
   };
-
+*/
+/*
+var request = {
+  query: 'food',
+  fields: ['name', 'geometry'],
+};
+*/
+/*
+  //service = new google.maps.places.PlacesService(map);
   service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
+}
 
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      createMarker(results[i]);
+      consolelog(results[i]);
+    }
+  }
+}
+*/
+/*
   service.findPlaceFromQuery(request, function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
         createMarker(results[i]);
+        console.log(results[i]);
+        console.log(results[i].name);
       }
 
       map.setCenter(results[0].geometry.location);
     }
   });
-}
+*/
 
-
+/*
 function createMarker(place) {
   var marker = new google.maps.Marker({
     map: map,
@@ -50,7 +107,7 @@ function createMarker(place) {
     infowindow.open(map, this);
   });
 }
-
+*/
 
 /*
 
