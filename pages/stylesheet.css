@@ -9,7 +9,7 @@ body {
    height:100%;
 	 font-family: Arial;
 	 font-size: 18px;
-	 background-color: #EBEBEB;
+	 background-color: #e9e9e9;
 	 color: #000;
 }
 
@@ -36,6 +36,7 @@ h2{
 /* car selection */
 .carselect{
 	border: solid #c5c6c8 2px;
+	background: #fefefe;
 	border-radius: 3px;
 	margin: 10px;
 	padding: 0;
@@ -72,13 +73,13 @@ header, header a{
 }
 
 .summcard{
-	border: solid #000 2px;
 	border-radius: 10px;
 	width: 90%;
 	text-align: center;
 	margin: auto;
 	max-height: 280px;
 	overflow-y: scroll;
+	background-color: #fefefe;
 }
 
 table {
@@ -87,7 +88,6 @@ table {
 
 /* Home log */
 .log {
-	border: solid #000 2px;
 	border-radius: 10px;
 	width: 90%;
 	text-align: center;
@@ -95,6 +95,7 @@ table {
 	overflow-y: scroll;
 	min-height:50px;
 	max-height:200px;
+	background-color: #fefefe;
 }
 
 /* New Entry button + new entry page styling */
@@ -105,9 +106,7 @@ table {
 	width: 40%;
 	margin: 0 30% 0 30%;
 	height: 60px;
-	box-shadow: inset 0px -3px 7px 0px #3dc21b;
-	background: linear-gradient(to bottom, #44a75f 5%, #5cbf2a 100%);
-	background-color: #44c767;
+	background-color: #2b2b2b;
 	border-radius: 10px;
 	border: 1px solid #18ab29;
 	display: inline-block;
@@ -186,7 +185,7 @@ button{
 }
 
 .btn {
-	background: linear-gradient(to bottom, #44a75f 5%, #5cbf2a 100%);
+	background: #2b2b2b;
 	border-radius: 10px;
 	border: 1px solid #18ab29;
 	display: inline-block;
@@ -201,7 +200,7 @@ button{
 }
 
 .delbtn {
-	background: linear-gradient(to bottom, #44a75f 5%, #5cbf2a 100%);
+	background: #2b2b2b;
 	border-radius: 10px;
 	border: 1px solid #18ab29;
 	display: inline-block;
@@ -255,8 +254,7 @@ nav a{
   align-content: center;
   align-items: flex-start;
   text-align: center;
-	border: 1px solid #333;
-	background-color: #333;
+	background-color: #2b2b2b;
 
 }
 .newentry a{
@@ -398,7 +396,7 @@ html, body {
   color: white;
 }
 
-.dark-mode h1, .dark-mode .summcard, .dark-mode .log, .dark-mode .panel, .dark-mode #panel2, .dark-mode #box  {
+.dark-mode h1, .dark-mode .summcard, .dark-mode ., .dark-mode .panel, .dark-mode #panel2, .dark-mode #box  {
   color: white;
 	border: 2px solid #c5c6c8;
 }
@@ -421,7 +419,7 @@ html, body {
 }
 
 .light-mode {
-  background-color: #EBEBEB;	#f5f5dc;
+  background-color: #e9e9e9;
   color: black;
 }
 
